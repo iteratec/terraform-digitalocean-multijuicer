@@ -171,4 +171,8 @@ resource "helm_release" "multijuicer" {
     name  = "balancer.metrics.serviceMonitor.enabled"
     value = "true"
   }
+  set {
+    name  = "balancer.service.type"
+    value = "LoadBalancer"
+  }
 }
